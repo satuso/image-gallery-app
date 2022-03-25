@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const Search = ({ setSearch }) => {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState("")
 
   const handleChange = (e) => {
     setInput(e.target.value)
@@ -10,7 +10,7 @@ const Search = ({ setSearch }) => {
   const handleSearch = (e) => {
     e.preventDefault()
     setSearch(input)
-    setInput('')
+    setInput("")
   }
   return (
     <div className='search'>
@@ -18,8 +18,8 @@ const Search = ({ setSearch }) => {
         <input
           type='text'
           placeholder='search images by keyword'
-          onFocus={(e) => e.target.placeholder=''}
-          onBlur={(e) => e.target.placeholder = 'search images by keyword'}
+          onFocus={(e) => e.target.placeholder=""}
+          onBlur={(e) => e.target.placeholder = "search images by keyword"}
           value={input}
           onChange={handleChange}
         >

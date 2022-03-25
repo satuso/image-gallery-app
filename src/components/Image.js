@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react"
+import { Link } from "react-router-dom"
 
 const Image = ({ image }) => {
   function parseISOString(s) {
-    var b = s.split(/\D+/);
+    var b = s.split(/\D+/)
     const date = new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6])).toUTCString()
     return date
   }
@@ -35,7 +35,7 @@ const Image = ({ image }) => {
           <p><b>{image.location.city && `${image.location.city}, ${image.location.country}`}</b></p>
         </div>
         <div className='image-exif'>
-          <h2><i className='fas fa-camera'></i> {image.exif.name ? image.exif.name : 'no exif data'}</h2>
+          <h2><i className='fas fa-camera'></i> {image.exif.name ? image.exif.name : "no exif data"}</h2>
           {image.exif.name &&
             <>
               <p>Make: {image.exif.make}</p>
